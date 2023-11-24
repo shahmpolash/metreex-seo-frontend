@@ -7,7 +7,7 @@ const AboutPageOptionTitle = () => {
   const [title, setTitle] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/about-page-titles`)
+    fetch(`https://e-commerce-seo-server.onrender.com/about-page-titles`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, [id]);
@@ -23,7 +23,7 @@ const AboutPageOptionTitle = () => {
       desc,
     };
 
-    const url = `http://localhost:5000/edit-about-page-title/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/edit-about-page-title/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

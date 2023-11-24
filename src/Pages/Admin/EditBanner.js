@@ -12,7 +12,7 @@ const EditBanner = () => {
   const [imageURL, setImageURL] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/banner/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/banner/${id}`)
       .then((res) => res.json())
       .then((info) => {
         setBanner(info);
@@ -37,7 +37,7 @@ const EditBanner = () => {
       bunnerImage: imageURL,
     };
 
-    const url = `http://localhost:5000/edit-banner/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/edit-banner/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

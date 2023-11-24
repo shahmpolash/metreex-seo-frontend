@@ -22,7 +22,7 @@ const FooterEditAll = () => {
       youtube
     };
 
-    const url = `http://localhost:5000/footer-social/`;
+    const url = `https://e-commerce-seo-server.onrender.com/footer-social/`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -52,7 +52,7 @@ const FooterEditAll = () => {
         linkFive
     };
 
-    const url = `http://localhost:5000/footer-link`;
+    const url = `https://e-commerce-seo-server.onrender.com/footer-link`;
     fetch(url, {
       method: "POST",
       headers: {

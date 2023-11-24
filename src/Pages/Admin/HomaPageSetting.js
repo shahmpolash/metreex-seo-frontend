@@ -15,27 +15,27 @@ const HomaPageSetting = () => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/banner/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/banner/`)
       .then((res) => res.json())
       .then((info) => setBanner(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/speciality/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/speciality/`)
       .then((res) => res.json())
       .then((info) => SetSpeciality(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/why-choose/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/why-choose/`)
       .then((res) => res.json())
       .then((info) => SetChoose(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/road/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/road/`)
       .then((res) => res.json())
       .then((info) => SetRoad(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/team-title`)
+    fetch(`https://e-commerce-seo-server.onrender.com/team-title`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, []);
@@ -43,7 +43,7 @@ const HomaPageSetting = () => {
   const [cta, setCta] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/cta-lists`)
+    fetch(`https://e-commerce-seo-server.onrender.com/cta-lists`)
       .then((res) => res.json())
       .then((info) => setCta(info));
   }, []);
@@ -51,7 +51,7 @@ const HomaPageSetting = () => {
   const [videoSection, setVideoSection] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/video-sections`)
+    fetch(`https://e-commerce-seo-server.onrender.com/video-sections`)
       .then((res) => res.json())
       .then((info) => setVideoSection(info));
   }, []);

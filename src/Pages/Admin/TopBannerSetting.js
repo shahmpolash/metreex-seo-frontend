@@ -6,7 +6,7 @@ const TopBannerSetting = () => {
   const [topBanners, setTopBanners] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/top-banner`)
+    fetch(`https://e-commerce-seo-server.onrender.com/top-banner`)
       .then((res) => res.json())
       .then((info) => setTopBanners(info));
   }, []);
@@ -29,7 +29,7 @@ const TopBannerSetting = () => {
       bannerBackgroundImage,
     };
 
-    const url = `http://localhost:5000/top-banner`;
+    const url = `https://e-commerce-seo-server.onrender.com/top-banner`;
     fetch(url, {
       method: "POST",
       headers: {

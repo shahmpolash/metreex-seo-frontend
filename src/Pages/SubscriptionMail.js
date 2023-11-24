@@ -9,7 +9,7 @@ const SubscriptionMail = () => {
   const paginationDigits = 3;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/subscription-email`)
+    fetch(`https://e-commerce-seo-server.onrender.com/subscription-email`)
       .then((res) => res.json())
       .then((info) => setMail(info));
   }, []);

@@ -43,7 +43,7 @@ const AboutPageOptionEdit = () => {
       subText,
     };
 
-    const url = `http://localhost:5000/edit-about-page/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/edit-about-page/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -66,7 +66,7 @@ const AboutPageOptionEdit = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/about-page/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/about-page/${id}`)
       .then((res) => res.json())
       .then((info) => {
         const storedImg = info.img; // Access 'img' directly from the response

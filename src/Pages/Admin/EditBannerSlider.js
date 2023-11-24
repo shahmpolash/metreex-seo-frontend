@@ -11,7 +11,7 @@
 //   const [sliders, setSliders] = useState([]);
 
 //   useEffect(() => {
-//     fetch(`http://localhost:5000/slider/${id}`)
+//     fetch(`https://e-commerce-seo-server.onrender.com/slider/${id}`)
 //       .then((res) => res.json())
 //       .then((info) => setSliders(info));
 //   }, [id]);
@@ -42,7 +42,7 @@
 //         sliderImg,
 //       };
 
-//       const url = `http://localhost:5000/slider/${id}`;
+//       const url = `https://e-commerce-seo-server.onrender.com/slider/${id}`;
 //       fetch(url, {
 //         method: "PUT",
 //         headers: {
@@ -117,7 +117,7 @@ const EditBannerSlider = () => {
   const [imagePreview, setImagePreview] = useState(null); // State for image preview
 
   useEffect(() => {
-    fetch(`http://localhost:5000/slider/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/slider/${id}`)
       .then((res) => res.json())
       .then((info) => {
         setSliders(info);
@@ -157,7 +157,7 @@ const EditBannerSlider = () => {
         sliderImg,
       };
 
-      const url = `http://localhost:5000/slider/${id}`;
+      const url = `https://e-commerce-seo-server.onrender.com/slider/${id}`;
       fetch(url, {
         method: "PUT",
         headers: {

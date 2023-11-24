@@ -50,7 +50,7 @@ const ViewTicketMessage = () => {
       currentDate,
     };
 
-    const url = `http://localhost:5000/add-ticket-reply`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-ticket-reply`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -65,13 +65,13 @@ const ViewTicketMessage = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reply-tickets`)
+    fetch(`https://e-commerce-seo-server.onrender.com/reply-tickets`)
       .then((res) => res.json())
       .then((info) => setTickets(info));
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/ticket/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/ticket/${id}`)
       .then((res) => res.json())
       .then((info) => setTicket(info));
   }, [id]);

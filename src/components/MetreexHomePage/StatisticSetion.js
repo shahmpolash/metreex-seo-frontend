@@ -6,7 +6,7 @@ const StatisticSetion = () => {
   const [counter, setCounter] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/counter-list`)
+    fetch(`https://e-commerce-seo-server.onrender.com/counter-list`)
       .then((res) => res.json())
       .then((info) => setCounter(info));
   }, []);

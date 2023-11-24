@@ -16,7 +16,7 @@ const TeamMemberEdit = () => {
   const [imgbbApiKey] = useState("1f8cc98e0f42a06989fb5e2589a9a8a4"); // Your imgbb API key
 
   useEffect(() => {
-    fetch(`http://localhost:5000/team/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/team/${id}`)
       .then((res) => res.json())
       .then((info) => setTeam(info));
   }, [id]);
@@ -58,7 +58,7 @@ const TeamMemberEdit = () => {
       twitter,
     };
 
-    const url = `http://localhost:5000/team/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/team/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

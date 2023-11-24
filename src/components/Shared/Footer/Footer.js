@@ -8,22 +8,22 @@ const Footer = () => {
   const [social, setSocial] = useState([]);
   const [contact, setContact] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/logo`)
+    fetch(`https://e-commerce-seo-server.onrender.com/logo`)
       .then((res) => res.json())
       .then((info) => setLogo(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/footer-about`)
+    fetch(`https://e-commerce-seo-server.onrender.com/footer-about`)
       .then((res) => res.json())
       .then((info) => setFooter(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/footer-social`)
+    fetch(`https://e-commerce-seo-server.onrender.com/footer-social`)
       .then((res) => res.json())
       .then((info) => setSocial(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/contact`)
+    fetch(`https://e-commerce-seo-server.onrender.com/contact`)
       .then((res) => res.json())
       .then((info) => setContact(info));
   }, []);
@@ -41,7 +41,7 @@ const Footer = () => {
       email,
     };
 
-    const url = `http://localhost:5000/add-newsLetter/`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-newsLetter/`;
     fetch(url, {
       method: "POST",
       headers: {

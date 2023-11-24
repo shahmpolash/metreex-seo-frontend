@@ -24,7 +24,7 @@ const Package = () => {
   const [selectedCountry, setSelectedCountry] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/package/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/package/${id}`)
       .then((res) => res.json())
       .then((info) => setPackage(info));
   }, [id]);
@@ -64,7 +64,7 @@ const Package = () => {
       orderDate: orderDate,
     };
 
-    const url = `http://localhost:5000/new-order`;
+    const url = `https://e-commerce-seo-server.onrender.com/new-order`;
     fetch(url, {
       method: "POST",
       headers: {

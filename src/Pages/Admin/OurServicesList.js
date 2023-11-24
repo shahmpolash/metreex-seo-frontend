@@ -52,7 +52,7 @@ const OurServicesList = () => {
           featureImg,
         };
 
-        const url = `http://localhost:5000/add-service`;
+        const url = `https://e-commerce-seo-server.onrender.com/add-service`;
         const sliderResponse = await fetch(url, {
           method: "POST",
           headers: {
@@ -75,12 +75,12 @@ const OurServicesList = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/services`)
+    fetch(`https://e-commerce-seo-server.onrender.com/services`)
       .then((res) => res.json())
       .then((info) => setServices(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/services-title`)
+    fetch(`https://e-commerce-seo-server.onrender.com/services-title`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, []);

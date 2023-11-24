@@ -20,7 +20,7 @@ const AboutUsOption = () => {
       btnUrl,
     };
 
-    const url = `http://localhost:5000/add-about`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-about`;
     fetch(url, {
       method: "POST",
       headers: {

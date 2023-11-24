@@ -19,7 +19,7 @@ const Register = () => {
   const [logo, setLogo] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/logo`)
+    fetch(`https://e-commerce-seo-server.onrender.com/logo`)
       .then((res) => res.json())
       .then((info) => setLogo(info));
   }, []);

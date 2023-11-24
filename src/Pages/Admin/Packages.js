@@ -11,13 +11,13 @@ const Packages = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/package-titles/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/package-titles/`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, [id]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/packages`)
+    fetch(`https://e-commerce-seo-server.onrender.com/packages`)
       .then((res) => res.json())
       .then((info) => setPackages(info));
   }, []);
@@ -36,7 +36,7 @@ const Packages = () => {
       description,
     };
 
-    const url = `http://localhost:5000/edit-package-title/`;
+    const url = `https://e-commerce-seo-server.onrender.com/edit-package-title/`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -82,7 +82,7 @@ const Packages = () => {
   //     featureTen,
   //   };
 
-  //   const url = `http://localhost:5000/add-package`;
+  //   const url = `https://e-commerce-seo-server.onrender.com/add-package`;
   //   fetch(url, {
   //     method: "POST",
   //     headers: {

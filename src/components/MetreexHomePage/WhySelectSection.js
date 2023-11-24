@@ -5,12 +5,12 @@ const WhySelectSection = () => {
   const [title, setTitle] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/solutions`)
+    fetch(`https://e-commerce-seo-server.onrender.com/solutions`)
       .then((res) => res.json())
       .then((info) => setSolution(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/solutions-title`)
+    fetch(`https://e-commerce-seo-server.onrender.com/solutions-title`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, []);

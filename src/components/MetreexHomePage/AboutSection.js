@@ -4,7 +4,7 @@ const AboutSection = () => {
   const [about, setAbout] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/abouts/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/abouts/`)
       .then((res) => res.json())
       .then((info) => setAbout(info));
   }, []);

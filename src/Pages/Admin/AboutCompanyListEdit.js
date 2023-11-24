@@ -10,7 +10,7 @@ const AboutCompanyListEdit = () => {
   const [companyAbout, setCompanyAbout] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/about-company-list/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/about-company-list/${id}`)
       .then((res) => res.json())
       .then((info) => setCompanyAbout(info));
   }, [id]);
@@ -25,7 +25,7 @@ const AboutCompanyListEdit = () => {
       counterNumber,
     };
 
-    const url = `http://localhost:5000/about-company-list/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/about-company-list/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

@@ -14,7 +14,7 @@ const TestimonialEdit = () => {
   const [imagePreview, setImagePreview] = useState(""); // To display a preview of the uploaded or existing image
 
   useEffect(() => {
-    fetch(`http://localhost:5000/testimonial/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/testimonial/${id}`)
       .then((res) => res.json())
       .then((info) => setTestimonial(info));
   }, [id]);
@@ -69,7 +69,7 @@ const TestimonialEdit = () => {
       desc,
     };
 
-    const url = `http://localhost:5000/testimonial/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/testimonial/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

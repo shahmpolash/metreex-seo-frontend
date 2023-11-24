@@ -9,7 +9,7 @@ const VideoSectionEdit = () => {
   const [imageURL, setImageURL] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/video-sections`)
+    fetch(`https://e-commerce-seo-server.onrender.com/video-sections`)
       .then((res) => res.json())
       .then((info) => {
         setBanner(info);
@@ -32,7 +32,7 @@ const VideoSectionEdit = () => {
       ctaImage: imageURL,
     };
 
-    const url = `http://localhost:5000/video-section/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/video-section/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

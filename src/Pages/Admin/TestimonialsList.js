@@ -9,7 +9,7 @@ const TestimonialsList = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/testimonials`)
+    fetch(`https://e-commerce-seo-server.onrender.com/testimonials`)
       .then((res) => res.json())
       .then((info) => setTestimonial(info));
   }, []);
@@ -30,7 +30,7 @@ const TestimonialsList = () => {
       desc,
     };
 
-    const url = `http://localhost:5000/testimonial`;
+    const url = `https://e-commerce-seo-server.onrender.com/testimonial`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -44,7 +44,7 @@ const TestimonialsList = () => {
       });
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/testimonials-title/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/testimonials-title/`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, [id]);

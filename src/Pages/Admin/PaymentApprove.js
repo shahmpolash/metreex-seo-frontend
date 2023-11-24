@@ -7,7 +7,7 @@ const PaymentApprove = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/order/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/order/${id}`)
       .then((res) => res.json())
       .then((info) => setorder(info));
   }, [id]);
@@ -18,7 +18,7 @@ const PaymentApprove = () => {
     
     const paymentStatusChange = {paymentStatus};
 
-    const url = `http://localhost:5000/payment-status/${order._id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/payment-status/${order._id}`;
     fetch(url, {
         method: 'PUT',
         headers: {

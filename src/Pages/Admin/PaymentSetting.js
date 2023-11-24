@@ -7,13 +7,13 @@ const PaymentSetting = () => {
   const [cash, setCash] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/payment-accounts`)
+    fetch(`https://e-commerce-seo-server.onrender.com/payment-accounts`)
       .then((res) => res.json())
       .then((info) => setPayments(info));
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/cash-on-delivery`)
+    fetch(`https://e-commerce-seo-server.onrender.com/cash-on-delivery`)
       .then((res) => res.json())
       .then((info) => setCash(info));
   }, []);
@@ -24,7 +24,7 @@ const PaymentSetting = () => {
 
     const cashOnDeliveryInfo = { cashOnDeliveryStatus };
 
-    const url = `http://localhost:5000/cash-on-delivery`;
+    const url = `https://e-commerce-seo-server.onrender.com/cash-on-delivery`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -52,7 +52,7 @@ const PaymentSetting = () => {
       accountType,
     };
 
-    const url = `http://localhost:5000/add-payment-account`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-payment-account`;
     fetch(url, {
       method: "POST",
       headers: {

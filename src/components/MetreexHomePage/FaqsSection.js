@@ -8,13 +8,13 @@ const FaqsSection = () => {
   const [faqTitle, setFaqTitle] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/faqs`)
+    fetch(`https://e-commerce-seo-server.onrender.com/faqs`)
       .then((res) => res.json())
       .then((info) => setFaqs(info));
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/faqs-title/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/faqs-title/`)
       .then((res) => res.json())
       .then((info) => setFaqTitle(info));
   }, []);

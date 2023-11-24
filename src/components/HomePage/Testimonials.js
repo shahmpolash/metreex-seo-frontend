@@ -7,13 +7,13 @@ const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/testimonials/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/testimonials/`)
       .then((res) => res.json())
       .then((info) => setTestimonials(info));
   }, [id]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/testimonials-title/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/testimonials-title/`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, [id]);

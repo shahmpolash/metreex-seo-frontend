@@ -4,7 +4,7 @@ const FeatureSection = () => {
   const [feature, setFeature] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/features`)
+    fetch(`https://e-commerce-seo-server.onrender.com/features`)
       .then((res) => res.json())
       .then((info) => setFeature(info));
   }, []);

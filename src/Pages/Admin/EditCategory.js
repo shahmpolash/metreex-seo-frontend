@@ -7,7 +7,7 @@ const EditCategory = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/category/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/category/${id}`)
       .then((res) => res.json())
       .then((info) => setCategory(info));
   }, [id]);
@@ -17,7 +17,7 @@ const EditCategory = () => {
     const Category = event.target.Category.value;
     const editCategory = { Category };
 
-    const url = `http://localhost:5000/edit-category/${category._id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/edit-category/${category._id}`;
     fetch(url, {
       method: "PUT",
       headers: {

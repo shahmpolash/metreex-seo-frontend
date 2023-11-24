@@ -6,7 +6,7 @@ const OurSpeciality = () => {
 
   const [speciality, SetSpeciality] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/speciality/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/speciality/${id}`)
       .then((res) => res.json())
       .then((info) => SetSpeciality(info));
   }, [id]);
@@ -18,14 +18,14 @@ const OurSpeciality = () => {
   const [packages, setPackages] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/packages`)
+    fetch(`https://e-commerce-seo-server.onrender.com/packages`)
       .then((res) => res.json())
       .then((info) => setPackages(info));
   }, []);
   const [title, setTitle] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/package-titles/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/package-titles/`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, []);

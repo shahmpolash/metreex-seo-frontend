@@ -9,7 +9,7 @@ const CouterOptionEdit = () => {
   const [counter, setCounter] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/counter-list`)
+    fetch(`https://e-commerce-seo-server.onrender.com/counter-list`)
       .then((res) => res.json())
       .then((info) => setCounter(info));
   }, []);
@@ -26,7 +26,7 @@ const CouterOptionEdit = () => {
       counterNumber,
     };
 
-    const url = `http://localhost:5000/add-counter`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-counter`;
     fetch(url, {
       method: "POST",
       headers: {

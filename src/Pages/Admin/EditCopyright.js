@@ -7,7 +7,7 @@ const EditCopyright = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/footer-copyright/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/footer-copyright/${id}`)
       .then((res) => res.json())
       .then((info) => setFooterCopyright(info));
   }, [id]);
@@ -20,7 +20,7 @@ const EditCopyright = () => {
       copyright,
     };
 
-    const url = `http://localhost:5000/footer-copyright/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/footer-copyright/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

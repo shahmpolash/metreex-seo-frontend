@@ -7,7 +7,7 @@ const CounterEdit = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/counter/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/counter/${id}`)
       .then((res) => res.json())
       .then((info) => setCounter(info));
   }, [id]);
@@ -22,7 +22,7 @@ const CounterEdit = () => {
       counterTitle,
     };
 
-    const url = `http://localhost:5000/counter/${id}/`;
+    const url = `https://e-commerce-seo-server.onrender.com/counter/${id}/`;
     fetch(url, {
       method: "PUT",
       headers: {

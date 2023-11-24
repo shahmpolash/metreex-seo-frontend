@@ -11,7 +11,7 @@ const SettingPayment = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/payments`)
+    fetch(`https://e-commerce-seo-server.onrender.com/payments`)
       .then((res) => res.json())
       .then((info) => setPaymentEmail(info));
   }, []);

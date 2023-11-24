@@ -13,7 +13,7 @@ const OrderPending = () => {
   const paginationDigits = 3;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders`)
+    fetch(`https://e-commerce-seo-server.onrender.com/orders`)
       .then((res) => res.json())
       .then((info) => {
         setOrders(info.reverse());

@@ -6,7 +6,7 @@ const ContactUsMessages = () => {
   const [message, setMessage] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/contact-messages`)
+    fetch(`https://e-commerce-seo-server.onrender.com/contact-messages`)
       .then((res) => res.json())
       .then((info) => setMessage(info.reverse()));
   }, []);

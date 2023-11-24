@@ -12,13 +12,13 @@ const HelpDeskAction = () => {
   const [ticket, setTicket] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/ticket/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/ticket/${id}`)
       .then((res) => res.json())
       .then((info) => setTicket(info));
   }, [id]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reply-tickets`)
+    fetch(`https://e-commerce-seo-server.onrender.com/reply-tickets`)
       .then((res) => res.json())
       .then((info) => setTickets(info));
   }, []);
@@ -68,7 +68,7 @@ const HelpDeskAction = () => {
       currentDate,
     };
 
-    const url = `http://localhost:5000/add-ticket-reply`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-ticket-reply`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -90,7 +90,7 @@ const HelpDeskAction = () => {
       ticketStatus,
     };
 
-    const url = `http://localhost:5000/ticket/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/ticket/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

@@ -13,7 +13,7 @@ const HelpDesk = () => {
   const paginationDigits = 3;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/tickets`)
+    fetch(`https://e-commerce-seo-server.onrender.com/tickets`)
       .then((res) => res.json())
       .then((info) => setTickets(info.reverse()));
   }, []);

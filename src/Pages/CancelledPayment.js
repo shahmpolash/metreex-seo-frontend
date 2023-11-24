@@ -15,7 +15,7 @@ const CancelledPayment = () => {
     const updatePaymentStatus = async () => {
       try {
         const updateOrder = { paymentStatus: "Cancelled" };
-        const url = `http://localhost:5000/payment-cancelled/${id}`;
+        const url = `https://e-commerce-seo-server.onrender.com/payment-cancelled/${id}`;
         const response = await fetch(url, {
           method: "PUT",
           headers: {

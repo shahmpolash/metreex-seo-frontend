@@ -10,12 +10,12 @@ const AboutCompanyOption = () => {
   const [companyAbount, setCompanyAbout] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/about-company-list`)
+    fetch(`https://e-commerce-seo-server.onrender.com/about-company-list`)
       .then((res) => res.json())
       .then((info) => setCounter(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/company-about-title`)
+    fetch(`https://e-commerce-seo-server.onrender.com/company-about-title`)
       .then((res) => res.json())
       .then((info) => setCompanyAbout(info));
   }, []);
@@ -32,7 +32,7 @@ const AboutCompanyOption = () => {
       counterNumber,
     };
 
-    const url = `http://localhost:5000/add-about-company`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-about-company`;
     fetch(url, {
       method: "POST",
       headers: {

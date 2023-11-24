@@ -29,7 +29,7 @@ const ContactPageEdit = () => {
       img: imgUrl,
     };
 
-    const url = `http://localhost:5000/contact/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/contact/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -58,7 +58,7 @@ const ContactPageEdit = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/contact/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/contact/${id}`)
       .then((res) => res.json())
       .then((info) => {
         setContact(info);

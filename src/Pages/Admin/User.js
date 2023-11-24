@@ -10,7 +10,7 @@ const User = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/user/${id}`)
       .then((res) => res.json())
       .then((users) => {
         const user = users.find((user) => user._id === id);
@@ -31,7 +31,7 @@ const User = () => {
       userEmail,
       userRole,
     };
-    const url = `http://localhost:5000/user/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/user/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

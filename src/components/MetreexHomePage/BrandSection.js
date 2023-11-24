@@ -6,7 +6,7 @@ const BrandSection = () => {
   const [brandImage, setBrandImage] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/sliders`)
+    fetch(`https://e-commerce-seo-server.onrender.com/sliders`)
       .then((res) => res.json())
       .then((info) => setBrandImage(info));
   }, []);

@@ -7,7 +7,7 @@ const EditOrder = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/order/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/order/${id}`)
       .then((res) => res.json())
       .then((info) => setOrder(info));
   }, [order]);
@@ -22,7 +22,7 @@ const EditOrder = () => {
     
     const orderEdit = {customerName, customerAddress, customerUpozilaName, customerDistrictName, customerPhoneNumber};
 
-    const url = `http://localhost:5000/order-edit/${order._id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/order-edit/${order._id}`;
     fetch(url, {
         method: 'PUT',
         headers: {

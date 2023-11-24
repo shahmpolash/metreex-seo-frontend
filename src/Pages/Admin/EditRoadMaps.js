@@ -10,7 +10,7 @@ const EditRoadMaps = () => {
   const [road, SetRoad] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/road/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/road/`)
       .then((res) => res.json())
       .then((info) => SetRoad(info));
   }, []);
@@ -59,7 +59,7 @@ const EditRoadMaps = () => {
       cardDescFive,
     };
 
-    const url = `http://localhost:5000/edit-road/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/edit-road/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

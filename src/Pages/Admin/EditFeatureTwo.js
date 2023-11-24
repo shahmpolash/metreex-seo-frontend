@@ -12,7 +12,7 @@ const EditFeatureTwo = () => {
   const [imgbbApiKey] = useState("1f8cc98e0f42a06989fb5e2589a9a8a4");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/feature-two/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/feature-two/${id}`)
       .then((res) => res.json())
       .then((info) => setFeature(info));
   }, [id]);
@@ -61,7 +61,7 @@ const EditFeatureTwo = () => {
       Desc,
     };
 
-    const url = `http://localhost:5000/feature-two/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/feature-two/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

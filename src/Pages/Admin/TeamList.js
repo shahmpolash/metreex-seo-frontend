@@ -16,12 +16,12 @@ const TeamList = () => {
   const [imgbbApiKey] = useState("1f8cc98e0f42a06989fb5e2589a9a8a4"); // Your imgbb API key
 
   useEffect(() => {
-    fetch(`http://localhost:5000/teams`)
+    fetch(`https://e-commerce-seo-server.onrender.com/teams`)
       .then((res) => res.json())
       .then((info) => setTeam(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/team-title/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/team-title/`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, []);
@@ -66,7 +66,7 @@ const TeamList = () => {
       twitter,
     };
 
-    const url = `http://localhost:5000/add-team`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-team`;
     fetch(url, {
       method: "POST",
       headers: {

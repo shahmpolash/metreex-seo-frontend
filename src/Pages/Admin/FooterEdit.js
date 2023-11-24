@@ -11,12 +11,12 @@ const FooterEdit = () => {
   const [social, setSocial] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/footer-about/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/footer-about/`)
       .then((res) => res.json())
       .then((info) => setFooterLink(info));
   }, [id]);
   useEffect(() => {
-    fetch(`http://localhost:5000/footer-social/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/footer-social/`)
       .then((res) => res.json())
       .then((info) => setSocial(info));
   }, [id]);
@@ -35,7 +35,7 @@ const FooterEdit = () => {
   //     youtube,
   //   };
 
-  //   const url = `http://localhost:5000/footer-social/`;
+  //   const url = `https://e-commerce-seo-server.onrender.com/footer-social/`;
   //   fetch(url, {
   //     method: "POST",
   //     headers: {
@@ -65,7 +65,7 @@ const FooterEdit = () => {
   //     linkFive,
   //   };
 
-  //   const url = `http://localhost:5000/footer-link`;
+  //   const url = `https://e-commerce-seo-server.onrender.com/footer-link`;
   //   fetch(url, {
   //     method: "POST",
   //     headers: {

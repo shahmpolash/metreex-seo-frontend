@@ -43,7 +43,7 @@ const AboutPageOption = () => {
       subText,
     };
 
-    const url = `http://localhost:5000/add-about-page/`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-about-page/`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -66,12 +66,12 @@ const AboutPageOption = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/abouts-page`)
+    fetch(`https://e-commerce-seo-server.onrender.com/abouts-page`)
       .then((res) => res.json())
       .then((info) => setAbout(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/about-page-titles`)
+    fetch(`https://e-commerce-seo-server.onrender.com/about-page-titles`)
       .then((res) => res.json())
       .then((info) => setAboutTitle(info));
   }, []);

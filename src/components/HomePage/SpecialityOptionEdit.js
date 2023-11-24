@@ -35,7 +35,7 @@ const SpecialityOptionEdit = () => {
       cardDescriptionFour,
     };
 
-    const url = `http://localhost:5000/edit-speciality/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/edit-speciality/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -50,7 +50,7 @@ const SpecialityOptionEdit = () => {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:5000/speciality/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/speciality/${id}`)
       .then((res) => res.json())
       .then((info) => SetSpeciality(info));
   }, [id]);

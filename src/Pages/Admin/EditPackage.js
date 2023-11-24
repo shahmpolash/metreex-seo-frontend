@@ -29,7 +29,7 @@ const EditPackage = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/package/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/package/${id}`)
       .then((res) => res.json())
       .then((info) => setPackage(info));
     setImgUrl(p.img || "");
@@ -68,7 +68,7 @@ const EditPackage = () => {
       featureTen,
     };
 
-    const url = `http://localhost:5000/edit-package/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/edit-package/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

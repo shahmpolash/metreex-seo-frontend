@@ -7,7 +7,7 @@ const ManagerRoute = ({ children }) => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch("http://localhost:5000/users")
+    fetch("https://e-commerce-seo-server.onrender.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data.reverse()));
   }, []);

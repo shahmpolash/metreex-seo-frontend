@@ -15,13 +15,13 @@ const UserDashboard = () => {
   const [currentPageData, setCurrentPageData] = useState(1);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/website`)
+    fetch(`https://e-commerce-seo-server.onrender.com/website`)
       .then((res) => res.json())
       .then((info) => setData(info.reverse()));
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders`)
+    fetch(`https://e-commerce-seo-server.onrender.com/orders`)
       .then((res) => res.json())
       .then((info) => setOrders(info.reverse()));
   }, []);

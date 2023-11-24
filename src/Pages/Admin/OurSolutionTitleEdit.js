@@ -7,7 +7,7 @@ const OurSolutionTitleEdit = () => {
   const [title, setTitle] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/solutions-title/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/solutions-title/`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, [id]);
@@ -23,7 +23,7 @@ const OurSolutionTitleEdit = () => {
       desc,
     };
 
-    const url = `http://localhost:5000/solution-title/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/solution-title/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

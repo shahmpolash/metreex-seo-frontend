@@ -5,12 +5,12 @@ const ServicesSection = () => {
   const [title, setTitle] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/services`)
+    fetch(`https://e-commerce-seo-server.onrender.com/services`)
       .then((res) => res.json())
       .then((info) => setService(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/services-title`)
+    fetch(`https://e-commerce-seo-server.onrender.com/services-title`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, []);

@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router-dom";
 const VideoSection = () => {
   const [videoSection, setVideoSection] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/video-sections`)
+    fetch(`https://e-commerce-seo-server.onrender.com/video-sections`)
       .then((res) => res.json())
       .then((info) => setVideoSection(info));
   }, []);

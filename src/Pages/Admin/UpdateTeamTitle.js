@@ -10,7 +10,7 @@ const TeamList = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/team-title`)
+    fetch(`https://e-commerce-seo-server.onrender.com/team-title`)
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, []);
@@ -27,7 +27,7 @@ const TeamList = () => {
       titleTwo,
     };
 
-    const url = `http://localhost:5000/edit-team-title/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/edit-team-title/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

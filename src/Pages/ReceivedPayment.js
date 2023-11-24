@@ -13,7 +13,7 @@ const ReceivedPayment = () => {
     const updatePaymentStatus = async () => {
       try {
         const updateOrder = { paymentStatus: "Received" };
-        const url = `http://localhost:5000/payment-received/${id}`;
+        const url = `https://e-commerce-seo-server.onrender.com/payment-received/${id}`;
         const response = await fetch(url, {
           method: "PUT",
           headers: {

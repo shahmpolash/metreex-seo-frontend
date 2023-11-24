@@ -16,12 +16,12 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/logo`)
+    fetch(`https://e-commerce-seo-server.onrender.com/logo`)
       .then((res) => res.json())
       .then((info) => setLogo(info));
   }, []);
   useEffect(() => {
-    fetch(`http://localhost:5000/contact`)
+    fetch(`https://e-commerce-seo-server.onrender.com/contact`)
       .then((res) => res.json())
       .then((info) => setContact(info));
   }, []);

@@ -10,7 +10,7 @@ const Setting = () => {
   const [contact, setContact] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/contact/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/contact/`)
       .then((res) => res.json())
       .then((info) => setContact(info));
   }, [id]);

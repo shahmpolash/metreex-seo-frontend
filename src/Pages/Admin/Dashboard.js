@@ -11,13 +11,13 @@ const Dashboard = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users`)
+    fetch(`https://e-commerce-seo-server.onrender.com/users`)
       .then((res) => res.json())
       .then((info) => setUsers(info.reverse()));
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/website`)
+    fetch(`https://e-commerce-seo-server.onrender.com/website`)
       .then((res) => res.json())
       .then((info) => setData(info.reverse()));
   }, []);

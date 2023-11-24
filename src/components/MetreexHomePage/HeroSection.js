@@ -25,7 +25,7 @@ const HeroSection = () => {
       auditStatus,
     };
 
-    const url = `http://localhost:5000/add-website`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-website`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -40,7 +40,7 @@ const HeroSection = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/banner`)
+    fetch(`https://e-commerce-seo-server.onrender.com/banner`)
       .then((res) => res.json())
       .then((info) => setBanner(info));
     setIsLoading(false);

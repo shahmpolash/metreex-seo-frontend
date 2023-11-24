@@ -5,7 +5,7 @@ const AboutUs = () => {
   const { id } = useParams();
   const [about, setAbout] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/about/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/about/${id}`)
       .then((res) => res.json())
       .then((info) => setAbout(info));
   }, [id]);

@@ -6,7 +6,7 @@ const ThankYou = () => {
     const [product, setProduct] = useState([]);
   
     useEffect(() => {
-      fetch(`http://localhost:5000/product/${id}`)
+      fetch(`https://e-commerce-seo-server.onrender.com/product/${id}`)
         .then((res) => res.json())
         .then((info) => setProduct(info));
     }, [product]);

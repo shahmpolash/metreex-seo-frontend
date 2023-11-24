@@ -55,7 +55,7 @@ const EditOurService = () => {
           featureImg,
         };
 
-        const url = `http://localhost:5000/service/${id}`;
+        const url = `https://e-commerce-seo-server.onrender.com/service/${id}`;
         const sliderResponse = await fetch(url, {
           method: "PUT",
           headers: {
@@ -78,7 +78,7 @@ const EditOurService = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/service/${id}`)
       .then((res) => res.json())
       .then((info) => setServices(info));
   }, []);

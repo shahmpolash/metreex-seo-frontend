@@ -43,7 +43,7 @@ const AboutUsServiceList = () => {
       subText,
     };
 
-    const url = `http://localhost:5000/add-about/`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-about/`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -66,7 +66,7 @@ const AboutUsServiceList = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/abouts`)
+    fetch(`https://e-commerce-seo-server.onrender.com/abouts`)
       .then((res) => res.json())
       .then((info) => setAbout(info));
   }, []);

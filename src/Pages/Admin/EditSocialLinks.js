@@ -9,7 +9,7 @@ const EditSocialLinks = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/footer-social/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/footer-social/${id}`)
       .then((res) => res.json())
       .then((info) => setSocial(info));
   }, [id]);
@@ -30,7 +30,7 @@ const EditSocialLinks = () => {
       linkedin,
     };
 
-    const url = `http://localhost:5000/footer-social/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/footer-social/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

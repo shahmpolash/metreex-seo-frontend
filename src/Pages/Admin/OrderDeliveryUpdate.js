@@ -7,7 +7,7 @@ const OrderDeliveryUpdate = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/order/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/order/${id}`)
       .then((res) => res.json())
       .then((info) => setorder(info));
   }, [id]);
@@ -18,7 +18,7 @@ const OrderDeliveryUpdate = () => {
     
     const deliveryUpdate = {deliveryStatus};
 
-    const url = `http://localhost:5000/delivery-status/${order._id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/delivery-status/${order._id}`;
     fetch(url, {
         method: 'PUT',
         headers: {

@@ -7,7 +7,7 @@ const ManageUsers = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users`)
+    fetch(`https://e-commerce-seo-server.onrender.com/users`)
       .then((res) => res.json())
       .then((info) => setUsers(info));
   }, []);
@@ -23,7 +23,7 @@ const ManageUsers = () => {
       userRole,
     };
 
-    const url = `http://localhost:5000/add-user`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-user`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -37,7 +37,7 @@ const ManageUsers = () => {
       });
   };
   const handleDeleteUser = (userId) => {
-    fetch(`http://localhost:5000/user/${userId}`, {
+    fetch(`https://e-commerce-seo-server.onrender.com/user/${userId}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

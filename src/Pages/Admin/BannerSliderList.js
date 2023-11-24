@@ -11,7 +11,7 @@ const BannerSliderList = () => {
   const [image, setImage] = useState(null); // To store the uploaded image
 
   useEffect(() => {
-    fetch(`http://localhost:5000/sliders`)
+    fetch(`https://e-commerce-seo-server.onrender.com/sliders`)
       .then((res) => res.json())
       .then((info) => setSliders(info));
   }, []);
@@ -55,7 +55,7 @@ const BannerSliderList = () => {
           sliderImg,
         };
 
-        const url = `http://localhost:5000/slider`;
+        const url = `https://e-commerce-seo-server.onrender.com/slider`;
         const sliderResponse = await fetch(url, {
           method: "POST",
           headers: {

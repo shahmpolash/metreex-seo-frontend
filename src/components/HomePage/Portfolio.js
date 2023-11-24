@@ -6,7 +6,7 @@ const Portfolio = () => {
   const [choose, setChoose] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/why-choose/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/why-choose/${id}`)
       .then((res) => res.json())
       .then((info) => setChoose(info));
   }, [id]);

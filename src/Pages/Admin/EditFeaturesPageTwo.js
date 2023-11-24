@@ -8,7 +8,7 @@ const EditFeaturesPageTwo = () => {
   const [image, setImage] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/features-two`)
+    fetch(`https://e-commerce-seo-server.onrender.com/features-two`)
       .then((res) => res.json())
       .then((info) => setFeature(info));
   }, []);
@@ -54,7 +54,7 @@ const EditFeaturesPageTwo = () => {
           featureImg,
         };
 
-        const url = `http://localhost:5000/add-feature-two`;
+        const url = `https://e-commerce-seo-server.onrender.com/add-feature-two`;
         const sliderResponse = await fetch(url, {
           method: "POST",
           headers: {

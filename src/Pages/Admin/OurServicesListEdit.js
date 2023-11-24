@@ -12,7 +12,7 @@ const OurServicesListEdit = () => {
   const [imgbbApiKey] = useState("1f8cc98e0f42a06989fb5e2589a9a8a4");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${id}`)
+    fetch(`https://e-commerce-seo-server.onrender.com/service/${id}`)
       .then((res) => res.json())
       .then((info) => setFeature(info));
   }, [id]);
@@ -55,7 +55,7 @@ const OurServicesListEdit = () => {
       serviceDesc,
     };
 
-    const url = `http://localhost:5000/service/${id}`;
+    const url = `https://e-commerce-seo-server.onrender.com/service/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

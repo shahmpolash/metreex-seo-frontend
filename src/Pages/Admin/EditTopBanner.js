@@ -7,7 +7,7 @@ const EditTopBanner = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/top-banner/${id}`)
+        fetch(`https://e-commerce-seo-server.onrender.com/top-banner/${id}`)
           .then((res) => res.json())
           .then((info) => setTopBanner(info));
       }, [id]);
@@ -23,7 +23,7 @@ const EditTopBanner = () => {
 
         const editTopBanner = { bannerTitle, bannerText, bannerButtonText,bannerButtonTextLink, bannerImage, bannerBackgroundImage };
     
-        const url = `http://localhost:5000/top-banner-edit/${id}`;
+        const url = `https://e-commerce-seo-server.onrender.com/top-banner-edit/${id}`;
         fetch(url, {
           method: "PUT",
           headers: {

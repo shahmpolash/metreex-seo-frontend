@@ -16,7 +16,7 @@ const ContactPage = () => {
     toast.success("Message sent successfully!");
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/contact/`)
+    fetch(`https://e-commerce-seo-server.onrender.com/contact/`)
       .then((res) => res.json())
       .then((info) => setContact(info));
   }, [id]);
@@ -39,7 +39,7 @@ const ContactPage = () => {
       messageStatus,
     };
 
-    const url = `http://localhost:5000/add-contact-message`;
+    const url = `https://e-commerce-seo-server.onrender.com/add-contact-message`;
     fetch(url, {
       method: "POST",
       headers: {
